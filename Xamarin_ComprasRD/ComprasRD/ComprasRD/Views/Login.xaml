@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:ComprasRD.ViewModel"                 
+             x:Class="ComprasRD.Views.Login"
+             BackgroundImageSource="imag6.png"
+             >
+    <!--<ContentPage.BindingContext>
+        --><!--<local:MainPageViewModel />--><!--
+        <local:LoginViewModel/>
+    </ContentPage.BindingContext>-->
+    
+        
+    <StackLayout  Padding="50" VerticalOptions="Center" >
+        <!--<StackLayout Margin="0 0 25 0">-->
+            
+        <ActivityIndicator            
+            IsRunning="{Binding IsBusy }"/>
+        <Label Text="User y Password:123" Style="{StaticResource Login}"/>
+            <StackLayout >
+            <Image Source="logocutted.png"/>
+        </StackLayout>
+
+        <Label Text="User" Style="{StaticResource Login}" />
+        <!--Keyboard="Email"-->
+        <Entry
+            Style="{StaticResource EntryText}"
+            Placeholder="Enter your User..."
+            Text="{Binding User}" />
+        <Label
+            Text="Password" Style="{StaticResource Login}" />
+        <Entry Style="{StaticResource EntryText}"
+            IsPassword="True"
+            Placeholder="Enter your Password..."
+            Text="{Binding Password}" />
+
+      
+
+
+        <Button
+            IsEnabled="{ Binding  IsEnabled}"
+            Command="{Binding LoginCommand}"
+            Text="Login" />
+
+      
+
+
+
+    </StackLayout>
+</ContentPage>

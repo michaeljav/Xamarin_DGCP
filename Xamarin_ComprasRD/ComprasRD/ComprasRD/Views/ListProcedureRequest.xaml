@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ComprasRD.Views.ListProcedureRequest">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="LISTA DE PROCESOS!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" TextColor="Black" FontAttributes="Bold"  />
+
+            <StackLayout>
+                <!--ItemTapped="Item_Clicked"-->
+                <ListView  x:Name="ProcesosLitsView" ItemsSource="{Binding ProcedureRequests}" 
+                       Margin="15"
+                        
+                       HasUnevenRows="true" 
+                       Footer="">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="0,10,0,10">
+                                    <Label Text="{Binding Id}" Font="Bold,13" TextColor="Gray" />
+                                    <Label Text="{Binding Reference}" Font="Bold,13" TextColor="Gray" />
+                                    <!--<Image   x:Name="imgProces"    Source="{Binding Picture}" WidthRequest="90" HeightRequest="90" />-->
+                                    <!--<StackLayout Orientation="Vertical">
+                                        <Label  x:Name="lblTitle"        Text  ="{Binding Name}" Font="Bold,13" TextColor="Red"  Margin="10,16,0,0"/>
+                                        <Label  x:Name="lblDescripcion"  Text  ="{Binding Description}" FontSize="11" TextColor="Silver" Margin="10,6,0,0"/>
+                                    </StackLayout>-->
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

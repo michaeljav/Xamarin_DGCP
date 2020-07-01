@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ComprasRD.App">
+    <Application.Resources>
+        <Style x:Key="Login" TargetType="Label">
+            <Setter Property="TextColor" Value="Beige"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Large"/>
+
+        </Style>
+        <Style x:Key="EntryText" TargetType="Entry">
+            <Setter Property="TextColor" Value="Beige"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Large"/>
+
+        </Style>
+        <Style x:Key="ImageProfileStyle" TargetType="Image">
+            <!--<Setter Property = "HorizontalOptions"     Value="CenterAndExpand" />-->
+            <Setter Property = "Margin"                Value="0,0,0,0" />
+            <Setter Property = "WidthRequest"          Value="120" />
+            <Setter Property = "HeightRequest"         Value="120" />
+            
+            <!--<Setter Property="BackgroundColor" Value="#64C5CC"/>-->
+        </Style>
+        <Style TargetType="NavigationPage">
+            <!--<Setter Property="BarBackgroundColor" Value="#ff5300"/>-->
+            <Setter Property="BarBackgroundColor" Value="#FFFFFF"/>
+            <Setter Property="BarTextColor" Value="#64C5CC"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="BackgroundColor" Value="#1976D2" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="5" />
+        </Style>
+        <!--LOGIN-->
+        <!--<Style x:Key="Login" TargetType="Label">
+            --><!--<Setter Property="BarBackgroundColor" Value="#ff5300"/>-->
+            <!--<Setter Property="BarBackgroundColor" Value="green"/>-->
+            <!--<Setter Property="BarTextColor" Value="#64C5CC"/>--><!--
+           
+        </Style>-->
+        <!--ENLOGIN-->
+
+    </Application.Resources>
+</Application>
